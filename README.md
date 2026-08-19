@@ -19,6 +19,9 @@ Tinkercad provides a simulation environment where this circuit can be virtually 
 
 
 ## Circuit Diagram:
+
+<img width="715" height="566" alt="image" src="https://github.com/user-attachments/assets/147a9472-0557-4772-af40-95ef840c125e" />
+
  
 ## Procedure: //Modify the procedure based on your circuit
 
@@ -54,9 +57,82 @@ Step 7: Save Your Work
 
 ## Code:
 
+const int trigPin = 9;
+
+const int echoPin = 10;
+
+const int ledPin = LED_BUILTIN;   // Built-in LED (Pin 13)
+
+
+
+long duration;
+
+int distance;
+
+
+
+void setup() {
+
+  pinMode(trigPin, OUTPUT);
+  
+  pinMode(echoPin, INPUT);
+  
+  pinMode(ledPin, OUTPUT);
+  
+  Serial.begin(9600);
+  
+}
+
+
+void loop() 
+{
+  digitalWrite(trigPin, LOW);
+  
+  delayMicroseconds(2);
+  
+
+
+  digitalWrite(trigPin, HIGH);
+  
+  delayMicroseconds(10);
+  
+  digitalWrite(trigPin, LOW);
+  
+
+
+  duration = pulseIn(echoPin, HIGH);
+  
+  distance = duration * 0.0343 / 2;
+  
+
+
+  Serial.println(distance);
+  
+
+
+  if (distance <= 100)
+  {
+  
+   digitalWrite(ledPin, HIGH);   // Built-in LED ON
+    
+  } else 
+  {
+  
+   digitalWrite(ledPin, LOW);    // Built-in LED OFF
+    
+  }
+  \
+
+
+  delay(100);
+  
+}
+
+
 
 ## Output:
  
+<img width="900" height="1600" alt="WhatsApp Image 2026-08-19 at 4 14 36 PM" src="https://github.com/user-attachments/assets/62aaf9ef-a360-4a24-8dcb-21280f89e2d5" />
 
 
 ## Result
