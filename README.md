@@ -133,6 +133,8 @@ void loop()
 ## Output:
  
 <img width="900" height="1600" alt="WhatsApp Image 2026-08-19 at 4 14 36 PM" src="https://github.com/user-attachments/assets/62aaf9ef-a360-4a24-8dcb-21280f89e2d5" />
+<img width="1280" height="964" alt="image" src="https://github.com/user-attachments/assets/181d82ad-a7f6-46a3-9f27-6ff496cb0651" />
+
 
 
 ## Result
